@@ -1,3 +1,7 @@
+<?php
+include('config.php');
+$result = mysqli_query($conn, "SELECT* from qualification ORDER by id DESC");
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -28,6 +32,7 @@
       </div>
     </nav>
     <div class="container" style="width: 850px">
+        <form action="" method="POST">
      <div class="mb-3 my-3">
           <label for="exampleInputEmail1" class="form-label">Name</label>
           <input
@@ -42,7 +47,8 @@
         <div class="row g-3 my-3">
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" id="validationDefault04"  >
+    <select class="form-select" name="SelectDegreeType"   >
+        
       <option selected disabled value="">Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -60,13 +66,13 @@
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
-    <input type="text" class="form-control" name="Marks/CGPA" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+    <input type="text" class="form-control" name="Marks" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
   </div>
 </div>
         <div class="row g-3 my-3">
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" id="validationDefault04"  >
+    <select class="form-select" name="SelectDegreeTypee"   >
       <option selected disabled value="">Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -76,21 +82,21 @@
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName" placeholder="Enter Degree Name" aria-label="State"  >
+    <input type="text" class="form-control" name="DegreeName1" placeholder="Enter Degree Name" aria-label="State"  >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Passing Year</label>
-    <input type="date" class="form-control" name="PassingYear" placeholder="Enter Passing Year" aria-label="State"  >
+    <input type="date" class="form-control" name="PassingYear1" placeholder="Enter Passing Year" aria-label="State"  >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
-    <input type="text" class="form-control" name="Marks/CGPA" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+    <input type="text" class="form-control" name="Marks1" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
   </div>
 </div>
         <div class="row g-3 my-3">
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" id="validationDefault04"  >
+    <select class="form-select" name="SelectDegreeTypeee"   >
       <option selected disabled value="">Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -100,21 +106,21 @@
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName" placeholder="Enter Degree Name" aria-label="State"  >
+    <input type="text" class="form-control" name="DegreeName2" placeholder="Enter Degree Name" aria-label="State"  >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Passing Year</label>
-    <input type="date" class="form-control" name="PassingYear" placeholder="Enter Passing Year" aria-label="State"  >
+    <input type="date" class="form-control" name="PassingYear2" placeholder="Enter Passing Year" aria-label="State"  >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
-    <input type="text" class="form-control" name="Marks/CGPA" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+    <input type="text" class="form-control" name="Marks2" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
   </div>
 </div>
         <div class="row g-3 my-3">
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" id="validationDefault04"  >
+    <select class="form-select" name="SelectDegreeTypeeee"   >
       <option selected disabled value="">Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -124,21 +130,50 @@
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName" placeholder="Enter Degree Name" aria-label="State"  >
+    <input type="text" class="form-control" name="DegreeName3" placeholder="Enter Degree Name" aria-label="State"  >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Passing Year</label>
-    <input type="date" class="form-control" name="PassingYear" placeholder="Enter Passing Year" aria-label="State"  >
+    <input type="date" class="form-control" name="PassingYear3" placeholder="Enter Passing Year" aria-label="State"  >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
-    <input type="text" class="form-control" name="Marks/CGPA" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+    <input type="text" class="form-control" name="Marks3" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
   </div>
 </div>
+<button type="submit" name="submit" class="btn btn-primary my-3">Submit</button>
+</form>
        
-  <button type="submit" name="submit" class="btn btn-primary my-3">Submit</button>
-    </div>
+</div>
+  <?php
+                if (isset($_POST['submit'])) {
+                $Name = $_POST['Name'];
+                // $SelectDegreeType = $_POST['SelectDegreeType'];
+                 $DegreeName = $_POST['DegreeName'];
+                 $PassingYear = $_POST['PassingYear'];
+                 $Marks = $_POST['Marks'];
+                // $SelectDegreeTypee = $_POST['SelectDegreeTypee'];
+                 $DegreeName1 = $_POST['DegreeName1'];
+                 $PassingYear1 = $_POST['PassingYear1'];
+                 $Marks1 = $_POST['Marks1'];
+                // $SelectDegreeTypeee = $_POST['SelectDegreeTypeee'];
+                 $DegreeName2 = $_POST['DegreeName2'];
+                 $PassingYear2 = $_POST['PassingYear2'];
+                 $Marks2 = $_POST['Marks2'];
+                // $SelectDegreeTypeeee = $_POST['SelectDegreeTypeeee'];
+                 $DegreeName3 = $_POST['DegreeName3'];
+                 $PassingYear3 = $_POST['PassingYear3'];
+                 $Marks3 = $_POST['Marks3'];
+                
+               
 
+
+
+    $result = mysqli_query($conn, "INSERT into qualification value('', '$Name',  '$DegreeName', '$PassingYear',
+     '$Marks',  ' $DegreeName1', ' $PassingYear1', '$Marks1', 
+     '$DegreeName2','$PassingYear2','$Marks2','$DegreeName3','$PassingYear3','$Marks3')");
+                 };
+                 ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

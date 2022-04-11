@@ -142,24 +142,24 @@ $result = mysqli_query($conn, "SELECT* from personalinformation ORDER by id DESC
       </form>
     </div>
       <?php
-    //              if (isset($_POST['submit'])) {
-    //             $Name = $_POST['Name'];
-    //              $FatherName = $_POST['FatherName'];
-    //              $Age = $_POST['Age'];
-    //              $Gender = $_POST['Gender'];
-    //              $Address = $_POST['Address'];
-    //              $PhoneNo = $_POST['PhoneNo'];
-    //              $CNICNo = $_POST['CNICNo'];
-    //              $BloodGroup = $_POST['BloodGroup'];
-    //              $Nationality = $_POST['Nationality'];
-    //              $Religion = $_POST['Religion'];
+                 if (isset($_POST['submit'])) {
+                $Name = $_POST['Name'];
+                 $FatherName = $_POST['FatherName'];
+                 $Age = $_POST['Age'];
+                 $Gender = $_POST['Gender'];
+                 $Address = $_POST['Address'];
+                 $PhoneNo = $_POST['PhoneNo'];
+                 $CNICNo = $_POST['CNICNo'];
+                 $BloodGroup = $_POST['BloodGroup'];
+                 $Nationality = $_POST['Nationality'];
+                 $Religion = $_POST['Religion'];
                
 
 
 
-    // $result = mysqli_query($conn, "INSERT into personalinformation value('', '$Name', '$FatherName', '$Age', '$Gender', '$Address', ' $PhoneNo', ' $CNICNo', ' $BloodGroup', '$Nationality', '$Religion ')");
-    //              }
-                //  session_destroy();
+    $result = mysqli_query($conn, "INSERT into personalinformation value('', '$Name', '$FatherName', '$Age', '$Gender', '$Address', ' $PhoneNo', ' $CNICNo', ' $BloodGroup', '$Nationality', '$Religion ')");
+                 }
+                 
                  ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
