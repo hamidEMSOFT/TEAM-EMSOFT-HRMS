@@ -1,6 +1,7 @@
 <?php
+error_reporting(0);
 include('config.php');
-$result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
+$result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,7 +20,7 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
     <div class="container my-5 justify-content-start " style="width:700px" >
     
     <h3 class="my-2">Enter Your Personal Information</h3>
-        <form class="row g-3 my-3  " action="" method="POST">
+        <form class="row g-3 my-3 " method="POST">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Name</label>
     <input type="text" class="form-control" name="Name" placeholder="Enter Name" required>
@@ -93,7 +94,6 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
     <select class="form-select" name="SelectDegreeType"   >
-        
       <option selected disabled value="">Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -198,8 +198,8 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
     <label for="inputState" class="form-label ">Company Designation</label>
     <select id="inputState" name="CompanyDesignation" class="form-select ">
       <option selected>Designations</option>
-        <option value="Islam">.......</option>
-          <option value="Other">......</option>
+        <option value="Islam">islam</option>
+          <option value="Other">other</option>
     </select>
 </div>
   <div class="col-md-6">
@@ -213,23 +213,23 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
   
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Salary</label>
-    <input type="text" class="form-control" name="Salary" placeholder="Enter Salary" aria-label="State"  >
+    <input type="text" class="form-control" name="Salary" placeholder="Enter Salary" aria-label="State" required >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Allowncess %</label>
-    <input type="text" class="form-control" name="Allowncess" placeholder="Enter Allowncess %" aria-label="State"  >
+    <input type="text" class="form-control" name="Allowncess" placeholder="Enter Allowncess %" aria-label="State" required >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Amount</label>
-    <input type="text" class="form-control" name="Amount" placeholder="Enter Amount " aria-label="Zip"  >
+    <input type="text" class="form-control" name="Amount" placeholder="Enter Amount " aria-label="Zip" required >
   </div>
   
-  <div class="col-12">
-          <button type="submit"  name="submit" class="btn btn-primary mx-5 my-3">Submit</button>
-  </div>
-</form>
+
+          <button type="submit"  name="submit" class="btn btn-primary ">Submit</button>
+  
+          </form>
        
-</div>
+            </div>
 
     <?php
                  if (isset($_POST['submit'])) {
@@ -273,12 +273,12 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
 
 
 
-    $result = mysqli_query($conn, "INSERT into second value('', '$Name', '$FatherName','$YourProfilePicture', '$Age', '$Gender', '$PermanentAddress',
+    $result = mysqli_query($conn, "INSERT into information value('', '$Name', '$FatherName','$YourProfilePicture', '$Age', '$Gender', '$PermanentAddress',
      ' $ndAddress', ' $PhoneNo', ' $CnicNo', '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion','$SelectDegreeType','$DegreeName',
      '$PassingYear','$Marks','$SelectDegreeTypee','$DegreeName1','$PassingYear1','$Marks1','$SelectDegreeTypeee','$DegreeName2',
      '$PassingYear2','$Marks2','$SelectDegreeTypeeee','$DegreeName3','$PassingYear3','$Marks3','$EmployeeID','$CompanyDesignation','$EmployeeType',
      '$BasicSalary','$Salary','$Allowncess','$Amount')");
-                 }
+                 };
 ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
