@@ -15,23 +15,19 @@ $result = mysqli_query($conn, "SELECT* from qualification ORDER by id DESC");
     <title>Qualification Form</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="ms-auto">
-       <a href="index.php" style="text-decoration:none">
-        <button class="btn btn-outline-primary mx-5">
-          Enter Personal Information
-        </button>
-        </a>
-        <button class="btn btn-outline-primary mx-4">
-          Enter Qualification
-        </button>
-
-        <button class="btn btn-outline-primary mx-4">
-          Enter Company Information
-        </button>
-      </div>
-    </nav>
-    <div class="container" style="width: 850px">
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="double.php">Personal Information Form</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="qualification.php">Enter Qualification</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="companyinformation.php">Enter Company Information</a>
+  </li>
+  
+</ul>
+    <div class="container my-5" style="width: 650px">
         <form action="" method="POST">
      <div class="mb-3 my-3">
           <label for="exampleInputEmail1" class="form-label">Name</label>

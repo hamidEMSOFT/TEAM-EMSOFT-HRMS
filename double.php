@@ -15,37 +15,28 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
     <title>Personal Information form</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="ms-auto">
-       <a href="index.html"></a>
-        <button class="btn btn-outline-primary mx-5">
-          Enter Personal Information
-        </button>
-        </a>
-        <button class="btn btn-outline-primary mx-4">
-          Enter Qualification
-        </button>
-
-        <button class="btn btn-outline-primary mx-4">
-          Enter Company Information
-        </button>
-      </div>
-    </nav>
-    <div class="container my-5" style="width: 650px">
-        <form class="row g-3" action="" method="POST">
+ 
+    <div class="container my-5 justify-content-start" style="width: 650px">
+    <div class="justify-content-start">
+    <h3 class="my-2">Enter Your Personal Information</h3>
+        <form class="row g-3 my-3  " action="" method="POST">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Name</label>
-    <input type="text" class="form-control" name="Name" required>
+    <input type="text" class="form-control" name="Name" placeholder="Enter Name" required>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-6 justify-content-start">
     <label for="inputPassword4" class="form-label">Father Name</label>
-    <input type="text" class="form-control" name="FatherName" required>
+    <input type="text" class="form-control" name="FatherName" placeholder="Enter Father Name" required>
   </div>
+  <div class="mb-3">
+  <label for="formFile" class="form-label">Enter Your Profile Picture</label>
+  <input class="form-control" type="file" name="YourProfilePicture">
+</div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Age</label>
-    <input type="text" class="form-control" name="Age" required>
+    <input type="text" class="form-control" name="Age"  placeholder="Enter Age" required>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
     <label for="inputState" class="form-label">Gender</label>
     <select id="inputState" name="Gender" class="form-select">
       <option selected>Select Gender</option>
@@ -56,69 +47,209 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Permanent Address</label>
-    <input type="text" class="form-control" name="PermanentAddress" required>
+    <input type="text" class="form-control" name="PermanentAddress" placeholder="Enter Permanent Address" required>
   </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">2nd Address</label>
-    <input type="text" class="form-control" name="ndAddress" required>
+    <input type="text" class="form-control" name="ndAddress" placeholder="Enter 2nd Address" required>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Phone No</label>
-    <input type="text" class="form-control" name="PhoneNo" required>
+    <input type="text" class="form-control" name="PhoneNo"  placeholder="Enter Phone No" required>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Cnic No</label>
-    <input type="text" class="form-control" name="CnicNo" required>
+    <input type="text" class="form-control" name="CnicNo" placeholder="Enter Cnic No" required>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Blood Group</label>
-    <input type="text" class="form-control" name="BloodGroup" required >
+    <input type="text" class="form-control" name="BloodGroup" placeholder="Enter Blood Group" required >
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Date Of Birth</label>
-    <input type="date" class="form-control" name="DateOfBirth" required>
+    <input type="date" class="form-control" name="DateOfBirth" placeholder="Enter Date Of Birth" required>
   </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label mx-3">Nationality</label>
-    <select id="inputState" name="Nationality" class="form-select mx-3">
+  <div class="col-md-6">
+    <label for="inputState" class="form-label ">Nationality</label>
+    <select id="inputState" name="Nationality" class="form-select ">
       <option selected>Select Nationality</option>
       <option value="Pakistani">Pakistani</option>
           <option value="Other">Other</option>
     </select>
   </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label mx-5">Religion</label>
-    <select id="inputState" name="Religion" class="form-select mx-5">
+  <div class="col-md-6">
+    <label for="inputState" class="form-label ">Religion</label>
+    <select id="inputState" name="Religion" class="form-select ">
       <option selected>Select Religion</option>
         <option value="Islam">Islam</option>
           <option value="Other">Other</option>
     </select>
   </div>
+  
+</form>
+</div>
+  <h3 class="my-5">Enter Your Qualification</h3>
+    <div class="row g-3 my-3">
+    <div class="col-md-3">
+    <label for="validationDefault04" class="form-label">Select Degree Type</label>
+    <select class="form-select" name="SelectDegreeType"   >
+        
+      <option selected disabled value="">Select Degree</option>
+      <option value="Bachelor's">Bachelor's</option>
+          <option value="ADP">ADP</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Matriculation">Matriculation</option>
+    </select>
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Degree Name</label>
+    <input type="text" class="form-control" name="DegreeName" placeholder="Enter Degree Name" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Passing Year</label>
+    <input type="date" class="form-control" name="PassingYear" placeholder="Enter Passing Year" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
+    <input type="text" class="form-control" name="Marks" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+  </div>
+</div>
+        <div class="row g-3 my-3">
+    <div class="col-md-3">
+    <label for="validationDefault04" class="form-label">Select Degree Type</label>
+    <select class="form-select" name="SelectDegreeTypee"   >
+      <option selected disabled value="">Select Degree</option>
+      <option value="Bachelor's">Bachelor's</option>
+          <option value="ADP">ADP</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Matriculation">Matriculation</option>
+    </select>
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Degree Name</label>
+    <input type="text" class="form-control" name="DegreeName1" placeholder="Enter Degree Name" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Passing Year</label>
+    <input type="date" class="form-control" name="PassingYear1" placeholder="Enter Passing Year" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
+    <input type="text" class="form-control" name="Marks1" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+  </div>
+</div>
+        <div class="row g-3 my-3">
+    <div class="col-md-3">
+    <label for="validationDefault04" class="form-label">Select Degree Type</label>
+    <select class="form-select" name="SelectDegreeTypeee"   >
+      <option selected disabled value="">Select Degree</option>
+      <option value="Bachelor's">Bachelor's</option>
+          <option value="ADP">ADP</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Matriculation">Matriculation</option>
+    </select>
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Degree Name</label>
+    <input type="text" class="form-control" name="DegreeName2" placeholder="Enter Degree Name" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Passing Year</label>
+    <input type="date" class="form-control" name="PassingYear2" placeholder="Enter Passing Year" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
+    <input type="text" class="form-control" name="Marks2" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+  </div>
+</div>
+        <div class="row g-3 my-3">
+    <div class="col-md-3">
+    <label for="validationDefault04" class="form-label">Select Degree Type</label>
+    <select class="form-select" name="SelectDegreeTypeeee"   >
+      <option selected disabled value="">Select Degree</option>
+      <option value="Bachelor's">Bachelor's</option>
+          <option value="ADP">ADP</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Matriculation">Matriculation</option>
+    </select>
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Degree Name</label>
+    <input type="text" class="form-control" name="DegreeName3" placeholder="Enter Degree Name" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Passing Year</label>
+    <input type="date" class="form-control" name="PassingYear3" placeholder="Enter Passing Year" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
+    <input type="text" class="form-control" name="Marks3" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+  </div>
+</div>
+
+</form>
+<h3 class="my-5">Enter Company Information</h3>
+<form class="row g-3" action="" method="POST">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Employee ID</label>
+    <input type="text" class="form-control" name="EmployeeID" placeholder="Enter Employee ID" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputState" class="form-label ">Company Designation</label>
+    <select id="inputState" name="Religion" class="form-select ">
+      <option selected>Designations</option>
+        <option value="Islam">.......</option>
+          <option value="Other">......</option>
+    </select>
+</div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Employee Type</label>
+    <input type="text" class="form-control" name="EmployeeType"  placeholder="Enter Employee Type" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Basic Salary</label>
+    <input type="text" class="form-control" name="BasicSalary"  placeholder="Enter Basic Salary" required>
+  </div>
+  
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Salary</label>
+    <input type="text" class="form-control" name="DegreeName" placeholder="Enter Salary" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Allowncess %</label>
+    <input type="text" class="form-control" name="Allowncess" placeholder="Enter Allowncess %" aria-label="State"  >
+  </div>
+  <div class="col-sm">
+       <label for="exampleInputPassword1" class="form-label">Amount</label>
+    <input type="text" class="form-control" name="Amount" placeholder="Enter Amount " aria-label="Zip"  >
+  </div>
+  
   <div class="col-12">
-    <button type="submit"  name="submit" class="btn btn-primary my-3">Submit</button>
+          <button type="submit"  name="submit" class="btn btn-primary mx-5 my-3">Submit</button>
   </div>
 </form>
-    </div>
+       
+</div>
     <?php
-    //              if (isset($_POST['submit'])) {
-    //             $Name = $_POST['Name'];
-    //              $FatherName = $_POST['FatherName'];
-    //              $Age = $_POST['Age'];
-    //              $Gender = $_POST['Gender'];
-    //              $PermanentAddress = $_POST['PermanentAddress'];
-    //              $ndAddress = $_POST['ndAddress'];
-    //              $PhoneNo = $_POST['PhoneNo'];
-    //              $CnicNo = $_POST['CnicNo'];
-    //              $BloodGroup = $_POST['BloodGroup'];
-    //              $DateOfBirth = $_POST['DateOfBirth'];
-    //              $Nationality = $_POST['Nationality'];
-    //              $Religion = $_POST['Religion'];
+                 if (isset($_POST['submit'])) {
+                $Name = $_POST['Name'];
+                 $FatherName = $_POST['FatherName'];
+                 $Age = $_POST['Age'];
+                 $Gender = $_POST['Gender'];
+                 $PermanentAddress = $_POST['PermanentAddress'];
+                 $ndAddress = $_POST['ndAddress'];
+                 $PhoneNo = $_POST['PhoneNo'];
+                 $CnicNo = $_POST['CnicNo'];
+                 $BloodGroup = $_POST['BloodGroup'];
+                 $DateOfBirth = $_POST['DateOfBirth'];
+                 $Nationality = $_POST['Nationality'];
+                 $Religion = $_POST['Religion'];
                
 
 
 
-    // $result = mysqli_query($conn, "INSERT into second value('', '$Name', '$FatherName', '$Age', '$Gender', '$PermanentAddress', ' $ndAddress', ' $PhoneNo', ' $CnicNo', '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion')");
-    //              }
+    $result = mysqli_query($conn, "INSERT into second value('', '$Name', '$FatherName', '$Age', '$Gender', '$PermanentAddress', ' $ndAddress', ' $PhoneNo', ' $CnicNo', '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion')");
+                 }
 ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
