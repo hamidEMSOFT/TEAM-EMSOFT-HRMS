@@ -1,6 +1,8 @@
 <?php
 error_reporting(0);
 include('config.php');
+$query = "SELECT * FROM department";
+$query_run = mysqli_query($conn, $query);
 $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
 ?>
 <!doctype html>
@@ -197,10 +199,18 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
   <div class="col-md-6">
     <label for="inputState" class="form-label ">Company Designation</label>
     <select id="inputState" name="CompanyDesignation" class="form-select ">
+        <?php
+      if (mysqli_num_rows($query_run) > 0) {
+        while ($row = mysqli_fetch_assoc($query_run)) {
+      ?>
       <option selected>Designations</option>
-        <option value="Islam">islam</option>
-          <option value="Other">other</option>
+        <option value="Islam"><?php echo $row['DepartmentName'] ?></option>
+        <option value="Islam"><?php echo $row['DepartmentID'] ?></option>
     </select>
+     <?php
+        }
+      } 
+      ?>
 </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Employee Type</label>
