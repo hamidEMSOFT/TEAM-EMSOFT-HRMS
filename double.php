@@ -16,8 +16,8 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
   </head>
   <body>
  
-    <div class="container my-5 justify-content-start" style="width: 650px">
-    <div class="justify-content-start">
+    <div class="container my-5 justify-content-start " style="width:700px" >
+    
     <h3 class="my-2">Enter Your Personal Information</h3>
         <form class="row g-3 my-3  " action="" method="POST">
   <div class="col-md-6">
@@ -86,8 +86,8 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
     </select>
   </div>
   
-</form>
-</div>
+
+
   <h3 class="my-5">Enter Your Qualification</h3>
     <div class="row g-3 my-3">
     <div class="col-md-3">
@@ -187,9 +187,9 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
   </div>
 </div>
 
-</form>
+
 <h3 class="my-5">Enter Company Information</h3>
-<form class="row g-3" action="" method="POST">
+
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Employee ID</label>
     <input type="text" class="form-control" name="EmployeeID" placeholder="Enter Employee ID" required>
@@ -230,6 +230,7 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
 </form>
        
 </div>
+
     <?php
                  if (isset($_POST['submit'])) {
                 $Name = $_POST['Name'];
