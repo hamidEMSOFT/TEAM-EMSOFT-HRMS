@@ -196,7 +196,7 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
   </div>
   <div class="col-md-6">
     <label for="inputState" class="form-label ">Company Designation</label>
-    <select id="inputState" name="Religion" class="form-select ">
+    <select id="inputState" name="CompanyDesignation" class="form-select ">
       <option selected>Designations</option>
         <option value="Islam">.......</option>
           <option value="Other">......</option>
@@ -213,7 +213,7 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
   
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Salary</label>
-    <input type="text" class="form-control" name="DegreeName" placeholder="Enter Salary" aria-label="State"  >
+    <input type="text" class="form-control" name="Salary" placeholder="Enter Salary" aria-label="State"  >
   </div>
   <div class="col-sm">
        <label for="exampleInputPassword1" class="form-label">Allowncess %</label>
@@ -233,8 +233,9 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
 
     <?php
                  if (isset($_POST['submit'])) {
-                $Name = $_POST['Name'];
+                 $Name = $_POST['Name'];
                  $FatherName = $_POST['FatherName'];
+                 $YourProfilePicture = $_POST['YourProfilePicture'];
                  $Age = $_POST['Age'];
                  $Gender = $_POST['Gender'];
                  $PermanentAddress = $_POST['PermanentAddress'];
@@ -245,11 +246,38 @@ $result = mysqli_query($conn, "SELECT* from second ORDER by id DESC");
                  $DateOfBirth = $_POST['DateOfBirth'];
                  $Nationality = $_POST['Nationality'];
                  $Religion = $_POST['Religion'];
-               
+                 $SelectDegreeType = $_POST['SelectDegreeType'];
+                 $DegreeName = $_POST['DegreeName'];
+                 $PassingYear = $_POST['PassingYear'];
+                 $Marks = $_POST['Marks'];
+                 $SelectDegreeTypee = $_POST['SelectDegreeTypee'];
+                 $DegreeName1 = $_POST['DegreeName1'];
+                 $PassingYear1 = $_POST['PassingYear1'];
+                 $Marks1 = $_POST['Marks1'];
+                 $SelectDegreeTypeee = $_POST['SelectDegreeTypeee'];
+                 $DegreeName2 = $_POST['DegreeName2'];
+                 $PassingYear2 = $_POST['PassingYear2'];
+                 $Marks2 = $_POST['Marks2'];
+                 $SelectDegreeTypeeee = $_POST['SelectDegreeTypeeee'];
+                 $DegreeName3 = $_POST['DegreeName3'];
+                 $PassingYear3 = $_POST['PassingYear3'];
+                 $Marks3 = $_POST['Marks3'];
+                 $EmployeeID = $_POST['EmployeeID'];
+                 $CompanyDesignation = $_POST['CompanyDesignation'];
+                 $EmployeeType = $_POST['EmployeeType'];
+                 $BasicSalary = $_POST['BasicSalary'];
+                 $Salary = $_POST['Salary'];
+                 $Allowncess = $_POST['Allowncess'];
+                 $Amount = $_POST['Amount'];
+                 
 
 
 
-    $result = mysqli_query($conn, "INSERT into second value('', '$Name', '$FatherName', '$Age', '$Gender', '$PermanentAddress', ' $ndAddress', ' $PhoneNo', ' $CnicNo', '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion')");
+    $result = mysqli_query($conn, "INSERT into second value('', '$Name', '$FatherName','$YourProfilePicture', '$Age', '$Gender', '$PermanentAddress',
+     ' $ndAddress', ' $PhoneNo', ' $CnicNo', '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion','$SelectDegreeType','$DegreeName',
+     '$PassingYear','$Marks','$SelectDegreeTypee','$DegreeName1','$PassingYear1','$Marks1','$SelectDegreeTypeee','$DegreeName2',
+     '$PassingYear2','$Marks2','$SelectDegreeTypeeee','$DegreeName3','$PassingYear3','$Marks3','$EmployeeID','$CompanyDesignation','$EmployeeType',
+     '$BasicSalary','$Salary','$Allowncess','$Amount')");
                  }
 ?>
     <!-- Optional JavaScript; choose one of the two! -->
