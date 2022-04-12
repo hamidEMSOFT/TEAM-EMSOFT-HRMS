@@ -198,14 +198,15 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
   </div>
   <div class="col-md-6">
     <label for="inputState" class="form-label ">Company Designation</label>
-    <select id="inputState" name="CompanyDesignation" class="form-select ">
-        <?php
+    <?php
       if (mysqli_num_rows($query_run) > 0) {
         while ($row = mysqli_fetch_assoc($query_run)) {
-      ?>
+          ?>
+          <select id="inputState" name="CompanyDesignation" class="form-select ">
       <option selected>Designations</option>
         <option value="Islam"><?php echo $row['DepartmentName'] ?></option>
         <option value="Islam"><?php echo $row['DepartmentID'] ?></option>
+
     </select>
      <?php
         }
