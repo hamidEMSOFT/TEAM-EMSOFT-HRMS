@@ -1,8 +1,10 @@
 <?php
 error_reporting(0);
 include('config.php');
-$query = "SELECT * FROM department";
+$query = "SELECT * FROM employee";
 $query_run = mysqli_query($conn, $query);
+$data = "SELECT * FROM designation";
+$query_data = mysqli_query($conn, $data);
 $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
 ?>
 <!doctype html>
@@ -19,7 +21,7 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
   </head>
   <body>
  
-    <div class="container my-5 justify-content-start " style="width:700px" >
+    <div class="container my-5  " style="width:700px" >
     
     <h3 class="my-2">Enter Your Personal Information</h3>
         <form class="row g-3 my-3 " method="POST">
@@ -196,23 +198,35 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     <label for="inputEmail4" class="form-label">Employee ID</label>
     <input type="text" class="form-control" name="EmployeeID" placeholder="Enter Employee ID" required>
   </div>
+  
   <div class="col-md-6">
     <label for="inputState" class="form-label ">Company Designation</label>
-    <?php
-      if (mysqli_num_rows($query_run) > 0) {
-        while ($row = mysqli_fetch_assoc($query_run)) {
-          ?>
-          <select id="inputState" name="CompanyDesignation" class="form-select ">
-      <option selected>Designations</option>
-        <option value="Islam"><?php echo $row['DepartmentName'] ?></option>
-        <option value="Islam"><?php echo $row['DepartmentID'] ?></option>
-
+    
+            
+    <?php 
+        if (mysqli_num_rows($query_run ) > 0) {
+          while ($row = mysqli_fetch_assoc($query_run )) {
+            ?>
+            <select id="inputState" name="CompanyDesignation" class="form-select ">
+                    <option selected>Designations</option>
+     <option value=""> Department Name:  <?php echo $row['EmployeeType'] ?></option>
+     <option value=""> Department ID:   <?php echo $row['EmployeeID'] ?></option>
+<!--      
+     <option value=""> Designation Title:  <?php echo $row['DesignationTitle'] ?></option>
+     <option value=""> Designation ID:   <?php echo $row['DesignationID'] ?></option>
+     <option value=""> Color:   <?php echo $row['PickColor'] ?></option>  -->
+     
+ 
+         
+            
+          
+   
     </select>
-     <?php
+    <?php
         }
       } 
       ?>
-</div>
+      </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Employee Type</label>
     <input type="text" class="form-control" name="EmployeeType"  placeholder="Enter Employee Type" required>
