@@ -1,10 +1,10 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 include('config.php');
-$query = "SELECT * FROM employee";
-$query_run = mysqli_query($conn, $query);
-$data = "SELECT * FROM designation";
-$query_data = mysqli_query($conn, $data);
+// $query = "SELECT * FROM employee";
+// $query_run = mysqli_query($conn, $query);
+// $data = "SELECT * FROM designation";
+// $query_data = mysqli_query($conn, $data);
 $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
 ?>
 <!doctype html>
@@ -96,8 +96,8 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
   <h3 class="my-5">Enter Your Qualification</h3>
     <div class="row g-3 my-3">
     <div class="col-md-3">
-    <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" name="SelectDegreeType"   >
+    <label for="inputState" class="form-label">Select Degree Type</label>
+    <select id="inputState" class="form-select" name="SelectDegreeType"   >
       <option selected >Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -106,22 +106,22 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     </select>
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Degree Name</label>
+       <label for="inputPassword4" class="form-label">Degree Name</label>
     <input type="text" class="form-control" name="DegreeName" placeholder="Enter Degree Name" aria-label="State"  >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Passing Year</label>
+       <label for="inputPassword4" class="form-label">Passing Year</label>
     <input type="date" class="form-control" name="PassingYear" placeholder="Enter Passing Year" aria-label="State"  >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
+       <label for="inputPassword4" class="form-label">Marks/CGPA</label>
     <input type="text" class="form-control" name="Marks" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
   </div>
 </div>
         <div class="row g-3 my-3">
     <div class="col-md-3">
-    <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" name="SelectDegreeType1"   >
+    <label for="inputState" class="form-label">Select Degree Type</label>
+    <select id="inputState" class="form-select" name="SelectDegreeType1"   >
       <option selected >Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -130,22 +130,22 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     </select>
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Degree Name</label>
+       <label for="inputPassword4" class="form-label">Degree Name</label>
     <input type="text" class="form-control" name="DegreeName1" placeholder="Enter Degree Name" aria-label="State"  >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Passing Year</label>
+       <label for="inputPassword4" class="form-label">Passing Year</label>
     <input type="date" class="form-control" name="PassingYear1" placeholder="Enter Passing Year" aria-label="State"  >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
+       <label for="inputPassword4" class="form-label">Marks/CGPA</label>
     <input type="text" class="form-control" name="Marks1" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
   </div>
 </div>
         <div class="row g-3 my-3">
     <div class="col-md-3">
-    <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" name="SelectDegreeType2"   >
+    <label for="inputState" class="form-label">Select Degree Type</label>
+    <select id="inputState" class="form-select" name="SelectDegreeType2"   >
       <option selected >Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -154,22 +154,22 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     </select>
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Degree Name</label>
+       <label for="inputPassword4" class="form-label">Degree Name</label>
     <input type="text" class="form-control" name="DegreeName2" placeholder="Enter Degree Name" aria-label="State"  >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Passing Year</label>
+       <label for="inputPassword4" class="form-label">Passing Year</label>
     <input type="date" class="form-control" name="PassingYear2" placeholder="Enter Passing Year" aria-label="State"  >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
+       <label for="inputPassword4" class="form-label">Marks/CGPA</label>
     <input type="text" class="form-control" name="Marks2" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
   </div>
 </div>
         <div class="row g-3 my-3">
     <div class="col-md-3">
-    <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" name="SelectDegreeType3"   >
+    <label for="inputState" class="form-label">Select Degree Type</label>
+    <select id="inputState" class="form-select" name="SelectDegreeType3"   >
       <option selected >Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
@@ -178,15 +178,15 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     </select>
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Degree Name</label>
+       <label for="inputPassword4" class="form-label">Degree Name</label>
     <input type="text" class="form-control" name="DegreeName3" placeholder="Enter Degree Name" aria-label="State"  >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Passing Year</label>
+       <label for="inputPassword4" class="form-label">Passing Year</label>
     <input type="date" class="form-control" name="PassingYear3" placeholder="Enter Passing Year" aria-label="State"  >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Marks/CGPA</label>
+       <label for="inputPassword4" class="form-label">Marks/CGPA</label>
     <input type="text" class="form-control" name="Marks3" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
   </div>
 </div>
@@ -195,7 +195,7 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
 <h3 class="my-5">Enter Company Information</h3>
 
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Employee ID</label>
+    <label for="inputPassword4" class="form-label">Employee ID</label>
     <input type="text" class="form-control" name="EmployeeID" placeholder="Enter Employee ID" required>
   </div>
   
@@ -209,6 +209,10 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
             ?>
             <select id="inputState" name="CompanyDesignation" class="form-select ">
                     <option selected>Designations</option>
+                    <option value="ok">ok</option>
+                    <option value="okk">ok</option>
+                    <option value="okkk">ok</option>
+                    <option value="okkkk">ok</option>
                     <!-- for Emploeee Data Fetch -->
      <!-- <option value=""> Department Name:  <?php echo $row['EmployeeType'] ?></option>
      <option value=""> Department ID:   <?php echo $row['EmployeeID'] ?></option> -->
@@ -235,29 +239,29 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
       ?>
       </div>
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Employee Type</label>
+    <label for="inputPassword4" class="form-label">Employee Type</label>
     <input type="text" class="form-control" name="EmployeeType"  placeholder="Enter Employee Type" required>
   </div>
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Basic Salary</label>
+    <label for="inputPassword4" class="form-label">Basic Salary</label>
     <input type="text" class="form-control" name="BasicSalary"  placeholder="Enter Basic Salary" required>
   </div>
   
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Salary</label>
+       <label for="inputPassword4" class="form-label">Salary</label>
     <input type="text" class="form-control" name="Salary" placeholder="Enter Salary" aria-label="State" required >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Allowncess %</label>
+       <label for="inputPassword4" class="form-label">Allowncess %</label>
     <input type="text" class="form-control" name="Allowncess" placeholder="Enter Allowncess %" aria-label="State" required >
   </div>
   <div class="col-sm">
-       <label for="exampleInputPassword1" class="form-label">Amount</label>
+       <label for="inputPassword4" class="form-label">Amount</label>
     <input type="text" class="form-control" name="Amount" placeholder="Enter Amount " aria-label="Zip" required >
   </div>
   
 
-          <button type="submit"  name="submit" class="btn btn-primary ">Submit</button>
+          <button   name="submit" class="btn btn-primary ">Submit</button>
   
           </form>
        
