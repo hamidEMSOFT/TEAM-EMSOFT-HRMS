@@ -209,8 +209,15 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
             ?>
             <select id="inputState" name="CompanyDesignation" class="form-select ">
                     <option selected>Designations</option>
-     <option value=""> Department Name:  <?php echo $row['EmployeeType'] ?></option>
-     <option value=""> Department ID:   <?php echo $row['EmployeeID'] ?></option>
+                    <!-- for Emploeee Data Fetch -->
+     <!-- <option value=""> Department Name:  <?php echo $row['EmployeeType'] ?></option>
+     <option value=""> Department ID:   <?php echo $row['EmployeeID'] ?></option> -->
+
+     <!-- For Department Data Fetch -->
+     <!-- <option value=""> Department Name:  <?php echo $row['DepartmentName'] ?></option>
+     <option value=""> Department ID:   <?php echo $row['DepartmentID'] ?></option> -->
+
+     <!-- For Designation Data Fetch -->
 <!--      
      <option value=""> Designation Title:  <?php echo $row['DesignationTitle'] ?></option>
      <option value=""> Designation ID:   <?php echo $row['DesignationID'] ?></option>

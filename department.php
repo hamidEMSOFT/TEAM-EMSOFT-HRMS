@@ -37,7 +37,7 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
                  if (isset($_POST['submit'])) {
                  $DepartmentName = $_POST['DepartmentName'];
                  $DepartmentID = $_POST['DepartmentID'];
-    $result = mysqli_query($conn, "INSERT into department value( '$DepartmentName', '$DepartmentID')");
+    $result = mysqli_query($conn, "INSERT into department value('', '$DepartmentName', '$DepartmentID')");
                  };
 ?>
      <form method="POST">
@@ -60,7 +60,7 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
                  $DesignationTitle = $_POST['DesignationTitle'];
                  $DesignationID = $_POST['DesignationID'];
                  $PickColor = $_POST['PickColor'];
-    $hamid = mysqli_query($conn, "INSERT into designation value( '$DesignationTitle', '$DesignationID','$PickColor')");
+    $hamid = mysqli_query($conn, "INSERT into designation value( '', '$DesignationTitle', '$DesignationID','$PickColor')");
                  };
 ?>
    <form method="POST">
