@@ -98,7 +98,7 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
     <select class="form-select" name="SelectDegreeType"   >
-      <option selected disabled value="">Select Degree</option>
+      <option selected >Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
           <option value="Intermediate">Intermediate</option>
@@ -121,8 +121,8 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
         <div class="row g-3 my-3">
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" name="SelectDegreeTypee"   >
-      <option selected disabled value="">Select Degree</option>
+    <select class="form-select" name="SelectDegreeType1"   >
+      <option selected >Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
           <option value="Intermediate">Intermediate</option>
@@ -145,8 +145,8 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
         <div class="row g-3 my-3">
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" name="SelectDegreeTypeee"   >
-      <option selected disabled value="">Select Degree</option>
+    <select class="form-select" name="SelectDegreeType2"   >
+      <option selected >Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
           <option value="Intermediate">Intermediate</option>
@@ -169,8 +169,8 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
         <div class="row g-3 my-3">
     <div class="col-md-3">
     <label for="validationDefault04" class="form-label">Select Degree Type</label>
-    <select class="form-select" name="SelectDegreeTypeeee"   >
-      <option selected disabled value="">Select Degree</option>
+    <select class="form-select" name="SelectDegreeType3"   >
+      <option selected >Select Degree</option>
       <option value="Bachelor's">Bachelor's</option>
           <option value="ADP">ADP</option>
           <option value="Intermediate">Intermediate</option>
@@ -204,8 +204,8 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     
             
     <?php 
-        if (mysqli_num_rows($query_run ) > 0) {
-          while ($row = mysqli_fetch_assoc($query_run )) {
+        // if (mysqli_num_rows($query_run ) > 0) {
+        //   while ($row = mysqli_fetch_assoc($query_run )) {
             ?>
             <select id="inputState" name="CompanyDesignation" class="form-select ">
                     <option selected>Designations</option>
@@ -230,8 +230,8 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
    
     </select>
     <?php
-        }
-      } 
+      //   }
+      // } 
       ?>
       </div>
   <div class="col-md-6">
@@ -282,15 +282,15 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
                  $DegreeName = $_POST['DegreeName'];
                  $PassingYear = $_POST['PassingYear'];
                  $Marks = $_POST['Marks'];
-                 $SelectDegreeTypee = $_POST['SelectDegreeTypee'];
+                 $SelectDegreeType1 = $_POST['SelectDegreeType1'];
                  $DegreeName1 = $_POST['DegreeName1'];
                  $PassingYear1 = $_POST['PassingYear1'];
                  $Marks1 = $_POST['Marks1'];
-                 $SelectDegreeTypeee = $_POST['SelectDegreeTypeee'];
+                 $SelectDegreeType2 = $_POST['SelectDegreeType2'];
                  $DegreeName2 = $_POST['DegreeName2'];
                  $PassingYear2 = $_POST['PassingYear2'];
                  $Marks2 = $_POST['Marks2'];
-                 $SelectDegreeTypeeee = $_POST['SelectDegreeTypeeee'];
+                 $SelectDegreeType3 = $_POST['SelectDegreeType3'];
                  $DegreeName3 = $_POST['DegreeName3'];
                  $PassingYear3 = $_POST['PassingYear3'];
                  $Marks3 = $_POST['Marks3'];
@@ -307,8 +307,8 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
 
     $result = mysqli_query($conn, "INSERT into information value('', '$Name', '$FatherName','$YourProfilePicture', '$Age', '$Gender', '$PermanentAddress',
      ' $ndAddress', ' $PhoneNo', ' $CnicNo', '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion','$SelectDegreeType','$DegreeName',
-     '$PassingYear','$Marks','$SelectDegreeTypee','$DegreeName1','$PassingYear1','$Marks1','$SelectDegreeTypeee','$DegreeName2',
-     '$PassingYear2','$Marks2','$SelectDegreeTypeeee','$DegreeName3','$PassingYear3','$Marks3','$EmployeeID','$CompanyDesignation','$EmployeeType',
+     '$PassingYear','$Marks','$SelectDegreeType1','$DegreeName1','$PassingYear1','$Marks1','$SelectDegreeType2','$DegreeName2',
+     '$PassingYear2','$Marks2','$SelectDegreeType3','$DegreeName3','$PassingYear3','$Marks3','$EmployeeID','$CompanyDesignation','$EmployeeType',
      '$BasicSalary','$Salary','$Allowncess','$Amount')");
                  };
 ?>
