@@ -3,8 +3,8 @@ error_reporting(0);
 include('config.php');
 // $query = "SELECT * FROM employee";
 // $query_run = mysqli_query($conn, $query);
-// $data = "SELECT * FROM designation";
-// $query_data = mysqli_query($conn, $data);
+$data = "SELECT * FROM designation";
+$query_data = mysqli_query($conn, $data);
 $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
 ?>
 <!doctype html>
@@ -18,12 +18,32 @@ $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Personal Information form</title>
+    <!-- <style>
+      .personal{
+    width: 50%;
+    display: flex;
+    position: absolute;
+    text-align: left;
+    align-content: left;
+    margin-left: 150px;
+    margin-top: 50px;
+  }
+      .qualification{
+    width: 50%;
+    display: grid;
+    position: relative;
+    text-align: right;
+    align-content: right;
+    margin-left: 450px;
+    margin-top: 50px;
+  }
+    </style> -->
   </head>
   <body>
  
     <div class="container my-5  " style="width:700px" >
-    
-    <h3 class="my-2">Enter Your Personal Information</h3>
+      <h3 class="my-2 mx-5">Enter Your Personal Information</h3>
+    <!-- <div class="personal"> -->
         <form class="row g-3 my-3 " method="post">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Name</label>
@@ -90,7 +110,9 @@ $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
           <option value="Other">Other</option>
     </select>
   </div>
+  <!-- </div> -->
   <h3 class="my-3" >Enter Your Qualification</h3>
+  <!-- <div class="qualification"> -->
    <div class="col-sm-3">
     <label class="form-label" for="specificSizeSelect">Degree Type</label>
     <select class="form-select" name="DegreeType" id="specificSizeSelect">
@@ -195,23 +217,31 @@ $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
       <input type="text" class="form-control" name="Marks3" placeholder="Enter Marks/CGPA">
     </div>
   </div>
+  <!-- </div> -->
  <h3 class="my-3" >Enter Company Information</h3>
  <div class="row g-3">
   <div class="col">
     <label class="form-label" for="specificSizeInputName">Employee ID</label>
     <input type="text" class="form-control" name="EmployeeID" placeholder="Enter Employee ID" aria-label="First name">
   </div>
-  <div class="col">
-    <label class="form-label" for="specificSizeInputName">Company Designation</label>
-    <select class="form-select" name="CompanyDesignation" >
+   <div class="col">
+      <label class="form-label" for="specificSizeInputName">Company Designation</label> 
+  <?php
+      // if (mysqli_num_rows($query_data) > 0) {
+      //   while ($row = mysqli_fetch_assoc($query_data)) {
+          ?>
+      <select class="form-select" name="CompanyDesignation" >
       <option selected>Select Designation</option>
-    <option value="First">First</option>
-    <option value="Second">Second</option>
-    <option value="Fourth">Fourth</option>
-    <option value="Five">Five</option>
-    <option value="Six">Six</option>
+    <option value="First">Designation Title : <?php echo $row['DesignationTitle'] ?></option>
+    <option value="First">Designation ID : <?php echo $row['DesignationID'] ?></option>
+    <option value="First">Color : <?php echo $row['PickColor'] ?></option>
+      
     </select>
-  </div>
+  <?php
+      //   }
+      // }
+      ?>
+      </div>
 </div>
 <div class="row g-3">
   <div class="col">
