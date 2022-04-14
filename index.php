@@ -1,11 +1,11 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 include('config.php');
 // $query = "SELECT * FROM employee";
 // $query_run = mysqli_query($conn, $query);
 // $data = "SELECT * FROM designation";
 // $query_data = mysqli_query($conn, $data);
-$result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
+$aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,7 +24,7 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
     <div class="container my-5  " style="width:700px" >
     
     <h3 class="my-2">Enter Your Personal Information</h3>
-        <form class="row g-3 my-3 " method="POST">
+        <form class="row g-3 my-3 " method="post">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Name</label>
     <input type="text" class="form-control" name="Name" placeholder="Enter Name" required>
@@ -90,177 +90,154 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
           <option value="Other">Other</option>
     </select>
   </div>
-  
-
-
-  <h3 class="my-5">Enter Your Qualification</h3>
-    <div class="row g-3 my-3">
-    <div class="col-md-3">
-    <label for="inputState" class="form-label">Select Degree Type</label>
-    <select id="inputState" class="form-select" name="SelectDegreeType"   >
-      <option selected >Select Degree</option>
-      <option value="Bachelor's">Bachelor's</option>
-          <option value="ADP">ADP</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Matriculation">Matriculation</option>
+  <h3 class="my-3" >Enter Your Qualification</h3>
+   <div class="col-sm-3">
+    <label class="form-label" for="specificSizeSelect">Degree Type</label>
+    <select class="form-select" name="DegreeType" id="specificSizeSelect">
+      <option selected>Select Degree</option>
+      <option value="1">Bachlor's</option>
+      <option value="2">ADP</option>
+      <option value="3">Intermediate</option>
+      <option value="4">Matriculation</option>
     </select>
   </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName" placeholder="Enter Degree Name" aria-label="State"  >
+   <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputName">Degree Name</label>
+    <input type="text" class="form-control" name="DegreeName" placeholder="Enter Degree Name">
   </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Passing Year</label>
-    <input type="date" class="form-control" name="PassingYear" placeholder="Enter Passing Year" aria-label="State"  >
+  <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputGroupUsername">Passing Year</label>
+    <div class="input-group">
+      <input type="date" class="form-control" name="PassingYear" placeholder="Enter Passig Year">
+    </div>
   </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Marks/CGPA</label>
-    <input type="text" class="form-control" name="Marks" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+  <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputGroupUsername">Marks/CGPA</label>
+    <div class="input-group">
+      <input type="text" class="form-control" name="Marks" placeholder="Enter Marks/CGPA">
+    </div>
+  </div>
+   <div class="col-sm-3">
+    <label class="form-label" for="specificSizeSelect">Degree Type</label>
+    <select class="form-select" name="DegreeType1" id="specificSizeSelect">
+      <option selected>Select Degree</option>
+      <option value="1">Bachlor's</option>
+      <option value="2">ADP</option>
+      <option value="3">Intermediate</option>
+      <option value="4">Matriculation</option>
+    </select>
+  </div>
+   <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputName">Degree Name</label>
+    <input type="text" class="form-control" name="DegreeName1" placeholder="Enter Degree Name">
+  </div>
+  <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputGroupUsername">Passing Year</label>
+    <div class="input-group">
+      <input type="date" class="form-control" name="PassingYear1" placeholder="Enter Passig Year">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputGroupUsername">Marks/CGPA</label>
+    <div class="input-group">
+      <input type="text" class="form-control" name="Marks1" placeholder="Enter Marks/CGPA">
+    </div>
+  </div>
+   <div class="col-sm-3">
+    <label class="form-label" for="specificSizeSelect">Degree Type</label>
+    <select class="form-select" name="DegreeType2" id="specificSizeSelect">
+     <option selected>Select Degree</option>
+      <option value="1">Bachlor's</option>
+      <option value="2">ADP</option>
+      <option value="3">Intermediate</option>
+      <option value="4">Matriculation</option>
+    </select>
+  </div>
+   <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputName">Degree Name</label>
+    <input type="text" class="form-control" name="DegreeName2" placeholder="Enter Degree Name">
+  </div>
+  <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputGroupUsername">Passing Year</label>
+    <div class="input-group">
+      <input type="date" class="form-control" name="PassingYear2" placeholder="Enter Passig Year">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputGroupUsername">Marks/CGPA</label>
+    <div class="input-group">
+      <input type="text" class="form-control" name="Marks2" placeholder="Enter Marks/CGPA">
+    </div>
+  </div>
+   <div class="col-sm-3">
+    <label class="form-label" for="specificSizeSelect">Degree Type</label>
+    <select class="form-select" name="DegreeType3" id="specificSizeSelect">
+      <option selected>Select Degree</option>
+      <option value="1">Bachlor's</option>
+      <option value="2">ADP</option>
+      <option value="3">Intermediate</option>
+      <option value="4">Matriculation</option>
+    </select>
+  </div>
+   <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputName">Degree Name</label>
+    <input type="text" class="form-control" name="DegreeName3" placeholder="Enter Degree Name">
+  </div>
+  <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputGroupUsername">Passing Year</label>
+    <div class="input-group">
+      <input type="date" class="form-control" name="PassingYear3" placeholder="Enter Passig Year">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <label class="form-label" for="specificSizeInputGroupUsername">Marks/CGPA</label>
+    <div class="input-group">
+      <input type="text" class="form-control" name="Marks3" placeholder="Enter Marks/CGPA">
+    </div>
+  </div>
+ <h3 class="my-3" >Enter Company Information</h3>
+ <div class="row g-3">
+  <div class="col">
+    <label class="form-label" for="specificSizeInputName">Employee ID</label>
+    <input type="text" class="form-control" name="EmployeeID" placeholder="Enter Employee ID" aria-label="First name">
+  </div>
+  <div class="col">
+    <label class="form-label" for="specificSizeInputName">Company Designation</label>
+    <select class="form-select" name="CompanyDesignation" >
+      <option selected>Select Designation</option>
+    <option value="First">First</option>
+    <option value="Second">Second</option>
+    <option value="Fourth">Fourth</option>
+    <option value="Five">Five</option>
+    <option value="Six">Six</option>
+    </select>
   </div>
 </div>
-        <div class="row g-3 my-3">
-    <div class="col-md-3">
-    <label for="inputState" class="form-label">Select Degree Type</label>
-    <select id="inputState" class="form-select" name="SelectDegreeType1"   >
-      <option selected >Select Degree</option>
-      <option value="Bachelor's">Bachelor's</option>
-          <option value="ADP">ADP</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Matriculation">Matriculation</option>
-    </select>
+<div class="row g-3">
+  <div class="col">
+    <label class="form-label" for="specificSizeInputName">Employee Type</label>
+    <input type="text" class="form-control" name="EmployeeType" placeholder="Enter Employee Type" aria-label="First name">
   </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName1" placeholder="Enter Degree Name" aria-label="State"  >
-  </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Passing Year</label>
-    <input type="date" class="form-control" name="PassingYear1" placeholder="Enter Passing Year" aria-label="State"  >
-  </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Marks/CGPA</label>
-    <input type="text" class="form-control" name="Marks1" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+  <div class="col">
+    <label class="form-label" for="specificSizeInputName">Basic Salary</label>
+    <input type="text" class="form-control" name="BasicSalary" placeholder="Enter Basic Salary" aria-label="Last name">
   </div>
 </div>
-        <div class="row g-3 my-3">
-    <div class="col-md-3">
-    <label for="inputState" class="form-label">Select Degree Type</label>
-    <select id="inputState" class="form-select" name="SelectDegreeType2"   >
-      <option selected >Select Degree</option>
-      <option value="Bachelor's">Bachelor's</option>
-          <option value="ADP">ADP</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Matriculation">Matriculation</option>
-    </select>
+<div class="row g-3">
+  
+  <div class="col-sm">
+    <label class="form-label" for="specificSizeInputName">Salary</label>
+    <input type="text" class="form-control" name="Salary" placeholder="Salary" aria-label="State">
   </div>
   <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName2" placeholder="Enter Degree Name" aria-label="State"  >
+    <label class="form-label" for="specificSizeInputName">Allowncess %</label>
+    <input type="text" class="form-control" name="Allowncess" placeholder="Allowncess" aria-label="State">
   </div>
   <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Passing Year</label>
-    <input type="date" class="form-control" name="PassingYear2" placeholder="Enter Passing Year" aria-label="State"  >
-  </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Marks/CGPA</label>
-    <input type="text" class="form-control" name="Marks2" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
+    <label class="form-label" for="specificSizeInputName">Total Amount</label>
+    <input type="text" class="form-control" name="TotalAmount" placeholder="TotalAmount" aria-label="Zip">
   </div>
 </div>
-        <div class="row g-3 my-3">
-    <div class="col-md-3">
-    <label for="inputState" class="form-label">Select Degree Type</label>
-    <select id="inputState" class="form-select" name="SelectDegreeType3"   >
-      <option selected >Select Degree</option>
-      <option value="Bachelor's">Bachelor's</option>
-          <option value="ADP">ADP</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Matriculation">Matriculation</option>
-    </select>
-  </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName3" placeholder="Enter Degree Name" aria-label="State"  >
-  </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Passing Year</label>
-    <input type="date" class="form-control" name="PassingYear3" placeholder="Enter Passing Year" aria-label="State"  >
-  </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Marks/CGPA</label>
-    <input type="text" class="form-control" name="Marks3" placeholder="Enter Marks/CGPA " aria-label="Zip"  >
-  </div>
-</div>
-
-
-<h3 class="my-5">Enter Company Information</h3>
-
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Employee ID</label>
-    <input type="text" class="form-control" name="EmployeeID" placeholder="Enter Employee ID" required>
-  </div>
-  
-  <div class="col-md-6">
-    <label for="inputState" class="form-label ">Company Designation</label>
-    
-            
-    <?php 
-        // if (mysqli_num_rows($query_run ) > 0) {
-        //   while ($row = mysqli_fetch_assoc($query_run )) {
-            ?>
-            <select id="inputState" name="CompanyDesignation" class="form-select ">
-                    <option selected>Designations</option>
-                    <option value="ok">ok</option>
-                    <option value="okk">ok</option>
-                    <option value="okkk">ok</option>
-                    <option value="okkkk">ok</option>
-                    <!-- for Emploeee Data Fetch -->
-     <!-- <option value=""> Department Name:  <?php echo $row['EmployeeType'] ?></option>
-     <option value=""> Department ID:   <?php echo $row['EmployeeID'] ?></option> -->
-
-     <!-- For Department Data Fetch -->
-     <!-- <option value=""> Department Name:  <?php echo $row['DepartmentName'] ?></option>
-     <option value=""> Department ID:   <?php echo $row['DepartmentID'] ?></option> -->
-
-     <!-- For Designation Data Fetch -->
-<!--      
-     <option value=""> Designation Title:  <?php echo $row['DesignationTitle'] ?></option>
-     <option value=""> Designation ID:   <?php echo $row['DesignationID'] ?></option>
-     <option value=""> Color:   <?php echo $row['PickColor'] ?></option>  -->
-     
- 
-         
-            
-          
-   
-    </select>
-    <?php
-      //   }
-      // } 
-      ?>
-      </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Employee Type</label>
-    <input type="text" class="form-control" name="EmployeeType"  placeholder="Enter Employee Type" required>
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Basic Salary</label>
-    <input type="text" class="form-control" name="BasicSalary"  placeholder="Enter Basic Salary" required>
-  </div>
-  
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Salary</label>
-    <input type="text" class="form-control" name="Salary" placeholder="Enter Salary" aria-label="State" required >
-  </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Allowncess %</label>
-    <input type="text" class="form-control" name="Allowncess" placeholder="Enter Allowncess %" aria-label="State" required >
-  </div>
-  <div class="col-sm">
-       <label for="inputPassword4" class="form-label">Amount</label>
-    <input type="text" class="form-control" name="Amount" placeholder="Enter Amount " aria-label="Zip" required >
-  </div>
-  
-
           <button   name="submit" class="btn btn-primary ">Submit</button>
   
           </form>
@@ -282,19 +259,19 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
                  $DateOfBirth = $_POST['DateOfBirth'];
                  $Nationality = $_POST['Nationality'];
                  $Religion = $_POST['Religion'];
-                 $SelectDegreeType = $_POST['SelectDegreeType'];
+                 $DegreeType = $_POST['DegreeType'];
                  $DegreeName = $_POST['DegreeName'];
                  $PassingYear = $_POST['PassingYear'];
                  $Marks = $_POST['Marks'];
-                 $SelectDegreeType1 = $_POST['SelectDegreeType1'];
+                 $DegreeType1 = $_POST['DegreeType1'];
                  $DegreeName1 = $_POST['DegreeName1'];
                  $PassingYear1 = $_POST['PassingYear1'];
                  $Marks1 = $_POST['Marks1'];
-                 $SelectDegreeType2 = $_POST['SelectDegreeType2'];
+                 $DegreeType2 = $_POST['DegreeType2'];
                  $DegreeName2 = $_POST['DegreeName2'];
                  $PassingYear2 = $_POST['PassingYear2'];
                  $Marks2 = $_POST['Marks2'];
-                 $SelectDegreeType3 = $_POST['SelectDegreeType3'];
+                 $DegreeType3 = $_POST['DegreeType3'];
                  $DegreeName3 = $_POST['DegreeName3'];
                  $PassingYear3 = $_POST['PassingYear3'];
                  $Marks3 = $_POST['Marks3'];
@@ -304,17 +281,20 @@ $result = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
                  $BasicSalary = $_POST['BasicSalary'];
                  $Salary = $_POST['Salary'];
                  $Allowncess = $_POST['Allowncess'];
-                 $Amount = $_POST['Amount'];
+                 $TotalAmount = $_POST['TotalAmount'];
                  
 
 
 
-    $result = mysqli_query($conn, "INSERT into information value('', '$Name', '$FatherName','$YourProfilePicture', '$Age', '$Gender', '$PermanentAddress',
-     ' $ndAddress', ' $PhoneNo', ' $CnicNo', '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion','$SelectDegreeType','$DegreeName',
-     '$PassingYear','$Marks','$SelectDegreeType1','$DegreeName1','$PassingYear1','$Marks1','$SelectDegreeType2','$DegreeName2',
-     '$PassingYear2','$Marks2','$SelectDegreeType3','$DegreeName3','$PassingYear3','$Marks3','$EmployeeID','$CompanyDesignation','$EmployeeType',
-     '$BasicSalary','$Salary','$Allowncess','$Amount')");
-                 };
+    $aliyan = mysqli_query($conn, "INSERT into information value('', '$Name', '$FatherName','$YourProfilePicture',
+     '$Age', '$Gender', '$PermanentAddress',
+     ' $ndAddress', ' $PhoneNo', ' $CnicNo',
+      '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion', '$DegreeType', '$DegreeName','$PassingYear',
+     '$Marks', '$DegreeType1', '$DegreeName1',
+     ' $PassingYear1', ' $Marks1', ' $DegreeType2',
+      '$DegreeName2', '$PassingYear2','$Marks2', '$DegreeType3', '$DegreeName3', '$PassingYear3','$Marks3',
+      '$EmployeeID', '$CompanyDesignation','$EmployeeType', '$BasicSalary', '$Salary', '$Allowncess','$TotalAmount')");
+                 }
 ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
