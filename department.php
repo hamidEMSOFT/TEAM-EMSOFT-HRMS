@@ -55,6 +55,7 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
   </div>
   
   <button  name="submit" class="btn btn-primary">ADD</button>
+  <button  name="submit" class="btn btn-danger mx-3">Update</button>
 </form>
  <?php
                  if (isset($_POST['submit'])) {
@@ -79,6 +80,7 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
   <label for="exampleColorInput" class="form-label "> Pick Color </label>
 <input type="color" class="form-control form-control-color justify-content-center " name="PickColor" value="#563d7c" title="Choose your color" required>
   <button name="ADD" class="btn btn-primary my-4">ADD</button>
+  <button  name="submit" class="btn btn-success mx-3">Update</button>
 </form>
  <?php
                  if (isset($_POST['ADD'])) {
@@ -105,6 +107,7 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
   </div>
   
   <button  name="enter" class="btn btn-primary my-4">ADD</button>
+  <button  name="submit" class="btn btn-dark mx-3">Update</button>
 </form>
 <?php
                  if (isset($_POST['enter'])) {
