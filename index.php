@@ -42,7 +42,7 @@ $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
   <body>
  
     <div class="container my-5  " style="width:700px" >
-      <h3 class="my-2 mx-5">Enter Your Personal Information</h3>
+      <h5 class="my-2 ">Enter Your Personal Information</h5>
     <!-- <div class="personal"> -->
         <form class="row g-3 my-3 " method="post">
   <div class="col-md-6">
@@ -110,9 +110,8 @@ $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
           <option value="Other">Other</option>
     </select>
   </div>
-  <!-- </div> -->
-  <h3 class="my-3" >Enter Your Qualification</h3>
-  <!-- <div class="qualification"> -->
+  <h5 class="my-3" >Enter Your Latest Qualification</h5>
+  
    <div class="col-sm-3">
     <label class="form-label" for="specificSizeSelect">Degree Type</label>
     <select class="form-select" name="DegreeType" id="specificSizeSelect">
@@ -139,86 +138,7 @@ $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
       <input type="text" class="form-control" name="Marks" placeholder="Enter Marks/CGPA">
     </div>
   </div>
-   <div class="col-sm-3">
-    <label class="form-label" for="specificSizeSelect">Degree Type</label>
-    <select class="form-select" name="DegreeType1" id="specificSizeSelect">
-      <option selected>Select Degree</option>
-      <option value="1">Bachlor's</option>
-      <option value="2">ADP</option>
-      <option value="3">Intermediate</option>
-      <option value="4">Matriculation</option>
-    </select>
-  </div>
-   <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputName">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName1" placeholder="Enter Degree Name">
-  </div>
-  <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputGroupUsername">Passing Year</label>
-    <div class="input-group">
-      <input type="date" class="form-control" name="PassingYear1" placeholder="Enter Passig Year">
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputGroupUsername">Marks/CGPA</label>
-    <div class="input-group">
-      <input type="text" class="form-control" name="Marks1" placeholder="Enter Marks/CGPA">
-    </div>
-  </div>
-   <div class="col-sm-3">
-    <label class="form-label" for="specificSizeSelect">Degree Type</label>
-    <select class="form-select" name="DegreeType2" id="specificSizeSelect">
-     <option selected>Select Degree</option>
-      <option value="1">Bachlor's</option>
-      <option value="2">ADP</option>
-      <option value="3">Intermediate</option>
-      <option value="4">Matriculation</option>
-    </select>
-  </div>
-   <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputName">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName2" placeholder="Enter Degree Name">
-  </div>
-  <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputGroupUsername">Passing Year</label>
-    <div class="input-group">
-      <input type="date" class="form-control" name="PassingYear2" placeholder="Enter Passig Year">
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputGroupUsername">Marks/CGPA</label>
-    <div class="input-group">
-      <input type="text" class="form-control" name="Marks2" placeholder="Enter Marks/CGPA">
-    </div>
-  </div>
-   <div class="col-sm-3">
-    <label class="form-label" for="specificSizeSelect">Degree Type</label>
-    <select class="form-select" name="DegreeType3" id="specificSizeSelect">
-      <option selected>Select Degree</option>
-      <option value="1">Bachlor's</option>
-      <option value="2">ADP</option>
-      <option value="3">Intermediate</option>
-      <option value="4">Matriculation</option>
-    </select>
-  </div>
-   <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputName">Degree Name</label>
-    <input type="text" class="form-control" name="DegreeName3" placeholder="Enter Degree Name">
-  </div>
-  <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputGroupUsername">Passing Year</label>
-    <div class="input-group">
-      <input type="date" class="form-control" name="PassingYear3" placeholder="Enter Passig Year">
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <label class="form-label" for="specificSizeInputGroupUsername">Marks/CGPA</label>
-    <div class="input-group">
-      <input type="text" class="form-control" name="Marks3" placeholder="Enter Marks/CGPA">
-    </div>
-  </div>
-  <!-- </div> -->
- <h3 class="my-3" >Enter Company Information</h3>
+ <h5 class="my-3" >Enter Company Information</h5>
  <div class="row g-3">
   <div class="col">
     <label class="form-label" for="specificSizeInputName">Employee ID</label>
@@ -293,18 +213,6 @@ $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
                  $DegreeName = $_POST['DegreeName'];
                  $PassingYear = $_POST['PassingYear'];
                  $Marks = $_POST['Marks'];
-                 $DegreeType1 = $_POST['DegreeType1'];
-                 $DegreeName1 = $_POST['DegreeName1'];
-                 $PassingYear1 = $_POST['PassingYear1'];
-                 $Marks1 = $_POST['Marks1'];
-                 $DegreeType2 = $_POST['DegreeType2'];
-                 $DegreeName2 = $_POST['DegreeName2'];
-                 $PassingYear2 = $_POST['PassingYear2'];
-                 $Marks2 = $_POST['Marks2'];
-                 $DegreeType3 = $_POST['DegreeType3'];
-                 $DegreeName3 = $_POST['DegreeName3'];
-                 $PassingYear3 = $_POST['PassingYear3'];
-                 $Marks3 = $_POST['Marks3'];
                  $EmployeeID = $_POST['EmployeeID'];
                  $CompanyDesignation = $_POST['CompanyDesignation'];
                  $EmployeeType = $_POST['EmployeeType'];
@@ -320,9 +228,7 @@ $aliyan = mysqli_query($conn, "SELECT* from information ORDER by id DESC");
      '$Age', '$Gender', '$PermanentAddress',
      ' $ndAddress', ' $PhoneNo', ' $CnicNo',
       '$BloodGroup', '$DateOfBirth','$Nationality', '$Religion', '$DegreeType', '$DegreeName','$PassingYear',
-     '$Marks', '$DegreeType1', '$DegreeName1',
-     ' $PassingYear1', ' $Marks1', ' $DegreeType2',
-      '$DegreeName2', '$PassingYear2','$Marks2', '$DegreeType3', '$DegreeName3', '$PassingYear3','$Marks3',
+     '$Marks',
       '$EmployeeID', '$CompanyDesignation','$EmployeeType', '$BasicSalary', '$Salary', '$Allowncess','$TotalAmount')");
                  }
 ?>

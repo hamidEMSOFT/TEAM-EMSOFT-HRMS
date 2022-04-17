@@ -43,7 +43,7 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
       <!-- <div class="container" style="width:350px"> -->
         <div class="departments">
     <form method="POST">
-        <h3 class="my-4">DEPARTMENTS</h3>
+        <h5 class="my-4">DEPARTMENTS</h3>
   <div class="mb-3 my-4">
     <label for="exampleInputEmail1" class="form-label">Department Name</label>
     <input type="text" class="form-control" name="DepartmentName" placeholder="Enter Department Name "  aria-describedby="emailHelp" required>
@@ -66,7 +66,7 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
 </div>
 <div class="designation">
      <form  method="POST">
-        <h3 class="my-4">DESIGNATION</h3>
+        <h5 class="my-4">DESIGNATION</h5>
   <div class="mb-3 my-4">
     <label for="exampleInputEmail1" class="form-label">Designation Title</label>
     <input type="text" class="form-control" name="DesignationTitle" placeholder="Enter Designation Title "  aria-describedby="emailHelp" required>
@@ -93,7 +93,7 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
 </div>
 <div class="employee">
    <form method="POST">
-        <h3 class="my-4">EMPLOYEE</h3>
+        <h5 class="my-4">EMPLOYEE</h5>
   <div class="mb-3 my-4">
     <label for="exampleInputEmail1" class="form-label">Employee Type</label>
     <input type="text" class="form-control" name="EmployeeType" placeholder="Enter Employee Type "  aria-describedby="emailHelp" required>
