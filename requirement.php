@@ -32,6 +32,7 @@
   </head>
   <body>
     <div class="container2" style="width: 600px">
+    <h5><b>Create an employer account</b></h5>
        <label for="staticEmail" class=" col-form-label"><b>Your company's name*</b></label>
        <input class="form-control" type="text"    aria-label="default input example" required>
        <label for="staticEmail" class=" col-form-label" ><b>Your company's number of employees</b></label>

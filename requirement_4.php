@@ -20,10 +20,10 @@
   }
  
   img{
-    height: 40%;
+    height: 35%;
      display: flex;
     position: absolute;
-    margin-left: 700px;
+    margin-left: 770px;
      margin-top: 200px;
      
   }
@@ -31,90 +31,23 @@
     <title>HRMS.com</title>
   </head>
   <body>
-    <div class="container2" style="width: 600px">
-    <h5><b>Include details</b></h5>
-       <label for="staticEmail" class=" col-form-label"><b>Job Title*</b></label>
-       <input class="form-control" type="text"    aria-label="default input example">
-      
-  <label for="staticEmail" class="  col-form-label"><b>Where would you like to advertise this job?*</b></label>
-    <input class="form-control" type="text"    aria-label="default input example">
-    <label for="staticEmail" class="  col-form-label"><b>Is this a full-time or part-time job?*</b></label>
-    <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Full-Time
-  </label>
+    <div class="container2" style="width: 700px">
+   <h5><b>Describe the job</b></h5>
+        <label for="staticEmail" class=" col-form-label"><b>Job description*</b></label>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Describe the responsibilities of this job, required work experience, skills, or education.</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
 </div>
-    <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Part-Time
-  </label>
+   
+        <label for="staticEmail" class=" col-form-label"><b>Are you taking any additional COVID-19 precautions?</b></label>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Let people know how your company is responding to COVID-19.</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="All customers are required to wear mask, curbside pickup available, common surfaces are sanitized regurlaly, vaccination requirements, etc."></textarea>
 </div>
-    <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Either full-time or part-time
-  </label>
-</div>
-    <label for="staticEmail" class="  col-form-label"><b>Do any of these job types apply?</b></label>
-    <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Temporary
-  </label>
-</div>
-    <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-   Contract
-  </label>
-</div>
-    <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Internship
-  </label>
-</div>
-    <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1">
-    Fresher
-  </label>
-</div>
-<label for="staticEmail" class="  col-form-label"><b>How you heard about us</b></label>
-    <select class="form-control" aria-label=".form-select-sm example">
-  <option selected>Select an option</option>
-  <option value="1">1 </option>
-<option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  
-  <option value="6">7</option>
-  
-  <option value="6">8</option>
-  <option value="6">9</option>
-  <option value="6">10</option>
-  <option value="6">10+</option>
-  <option value="6">I have an ongoing need to fill this roll</option>
-  
-</select>
-<label for="staticEmail" class="  col-form-label"><b>How quickly do you need to hire?*</b></label>
-     <select class="form-control" aria-label=".form-select-sm example">
-  <option selected>Select an option</option>
-  <option value="1">1 to 3 days </option>
-  <option value="2">3 to 7 days</option>
-  <option value="3">1 to 2 weeks</option>
-  <option value="4">2 to 4 weeks</option>
-  <option value="5">more than 4 weeks </option>
-  >
-  
-</select>
+    
 
 <button type="button" class="btn btn-dark ">Back</button>
-<a href="requirement_3.php">
+<a href="requirement_5.php">
 <button type="button" class="btn  btn-primary my-3 mx-5">Save and continue</button>
 </a>
 </div>
