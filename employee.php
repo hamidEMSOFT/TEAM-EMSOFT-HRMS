@@ -1,8 +1,6 @@
 <?php
 error_reporting(0);
 include('config.php');
-$result = mysqli_query($conn, "SELECT* from department ORDER by id DESC");
-$hamid = mysqli_query($conn, "SELECT* from designation ORDER by id DESC");
 $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
 ?>
 <!doctype html>
@@ -18,31 +16,31 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
     <title>Company Validation</title>
   </head>
   <body>
-     
-        <div class="container" style="width: 700px">
-    <form method="POST">
-        <h5 class="my-4">DEPARTMENTS</h3>
+    
+<div class="container" style="width: 700px">
+   <form method="POST">
+        <h5 class="my-4">EMPLOYEE</h5>
   <div class="mb-3 my-4">
-    <label for="exampleInputEmail1" class="form-label">Department Name</label>
-    <input type="text" class="form-control" name="DepartmentName" placeholder="Enter Department Name "  aria-describedby="emailHelp" required>
+    <label for="exampleInputEmail1" class="form-label">Employee Type</label>
+    <input type="text" class="form-control" name="EmployeeType" placeholder="Enter Employee Type "  aria-describedby="emailHelp" required>
     
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Department ID</label>
-    <input type="text" name="DepartmentID" placeholder="Enter Department ID " class="form-control" required >
+    <label for="exampleInputPassword1" class="form-label">Employee ID</label>
+    <input type="text" name="EmployeeID" placeholder="Enter Employee ID " class="form-control" required >
   </div>
-  <button  name="submit" class="btn btn-primary">ADD</button>
   
+  <button  name="enter" class="btn btn-primary my-4">ADD</button>
 </form>
- <?php
-                 if(isset($_POST['submit'])) {
-                 $DepartmentName = $_POST['DepartmentName'];
-                 $DepartmentID = $_POST['DepartmentID'];
-    $result = mysqli_query($conn, "INSERT into department value('', '$DepartmentName', '$DepartmentID')");
+<?php
+                 if(isset($_POST['enter'])) {
+                 $EmployeeType = $_POST['EmployeeType'];
+                 $EmployeeID = $_POST['EmployeeID'];
+                
+    $aliyan = mysqli_query($conn, "INSERT into employee value( '','$EmployeeType', '$EmployeeID')");
                  };
 ?>
 </div>
-
 <!-- </div> -->
     <!-- Optional JavaScript; choose one of the two! -->
 

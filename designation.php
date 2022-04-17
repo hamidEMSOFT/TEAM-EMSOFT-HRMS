@@ -1,9 +1,9 @@
 <?php
 error_reporting(0);
 include('config.php');
-$result = mysqli_query($conn, "SELECT* from department ORDER by id DESC");
+
 $hamid = mysqli_query($conn, "SELECT* from designation ORDER by id DESC");
-$aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,28 +18,32 @@ $aliyan = mysqli_query($conn, "SELECT* from employee ORDER by id DESC");
     <title>Company Validation</title>
   </head>
   <body>
-     
-        <div class="container" style="width: 700px">
-    <form method="POST">
-        <h5 class="my-4">DEPARTMENTS</h3>
+    
+<div class="container" style="width: 700px">
+     <form  method="POST">
+        <h5 class="my-4">DESIGNATION</h5>
   <div class="mb-3 my-4">
-    <label for="exampleInputEmail1" class="form-label">Department Name</label>
-    <input type="text" class="form-control" name="DepartmentName" placeholder="Enter Department Name "  aria-describedby="emailHelp" required>
+    <label for="exampleInputEmail1" class="form-label">Designation Title</label>
+    <input type="text" class="form-control" name="DesignationTitle" placeholder="Enter Designation Title "  aria-describedby="emailHelp" required>
     
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Department ID</label>
-    <input type="text" name="DepartmentID" placeholder="Enter Department ID " class="form-control" required >
+    <label for="exampleInputPassword1" class="form-label">Designation ID</label>
+    <input type="text" name="DesignationID" placeholder="Enter Designation ID " class="form-control" required>
   </div>
-  <button  name="submit" class="btn btn-primary">ADD</button>
-  
+  <label for="exampleColorInput" class="form-label "> Pick Color </label>
+<input type="color" class="form-control form-control-color justify-content-center " name="PickColor" value="#563d7c" title="Choose your color" required>
+  <button name="ADD" class="btn btn-primary my-4">ADD</button>
 </form>
  <?php
-                 if(isset($_POST['submit'])) {
-                 $DepartmentName = $_POST['DepartmentName'];
-                 $DepartmentID = $_POST['DepartmentID'];
-    $result = mysqli_query($conn, "INSERT into department value('', '$DepartmentName', '$DepartmentID')");
-                 };
+                 if(isset($_POST['ADD'])) {
+                 $DesignationTitle = $_POST['DesignationTitle'];
+                 $DesignationID = $_POST['DesignationID'];
+                 $PickColor = $_POST['PickColor'];
+    $hamid = mysqli_query($conn, "INSERT into designation value( '', '$DesignationTitle', '$DesignationID','$PickColor')");
+         header("department.php");
+         exit;        
+  };
 ?>
 </div>
 
