@@ -15,7 +15,7 @@
     padding: 10px;
     align-content: left;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 150px;
     border: 2px solid black;
   }
  
@@ -32,9 +32,43 @@
   </head>
   <body>
     <div class="container2" style="width: 600px">
-    <h5><b>Include details</b></h5>
-       <label for="staticEmail" class=" col-form-label"><b>Job Title*</b></label>
-       <input class="form-control" type="text"    aria-label="default input example">
+    <h5><b>Add Compensation</b></h5>
+       <label for="staticEmail" class=" col-form-label"><b>What is the pay?</b></label>
+         <div class="col-sm-3">
+   <label for="staticEmail" class=" col-form-label">Show pay by</label>
+    <select class="form-select" id="specificSizeSelect">
+      <option selected>Range</option>
+      <option value="1">Starting Month</option>
+      <option value="2">Maximum Amount</option>
+      <option value="2">Exact Amount</option>
+    </select>
+  </div>
+       <form class="row gy-2 gx-3 align-items-center">
+  <div class="col-auto">
+     <label for="staticEmail" class=" col-form-label">Minimum</label>
+    <input type="text" class="form-control" id="autoSizingInput" placeholder="PKR">
+  </div>
+  <div class="col-auto">
+     <label for="staticEmail" class=" col-form-label">Maximum</label>
+    <div class="input-group">
+     
+      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="PKR">
+    </div>
+  </div>
+  <div class="col-auto">
+     <label for="staticEmail" class=" col-form-label">Rate</label>
+    <select class="form-select" id="autoSizingSelect">
+      <option selected>per hour </option>
+      <option value="1">per day</option>
+      <option value="2">per week</option>
+      <option value="3">per month</option>
+      <option value="3">per year</option>
+    </select>
+  </div>
+ 
+  
+</form>
+       <!-- <input class="form-control" type="text"    aria-label="default input example">
       
   <label for="staticEmail" class="  col-form-label"><b>Where would you like to advertise this job?*</b></label>
     <input class="form-control" type="text"    aria-label="default input example">
@@ -111,12 +145,10 @@
   <option value="5">more than 4 weeks </option>
   >
   
-</select>
+</select> -->
 
 <button type="button" class="btn btn-dark ">Back</button>
-<a href="requirement_3.php">
 <button type="button" class="btn  btn-primary my-3 mx-5">Save and continue</button>
-</a>
 </div>
 <div class= "img" style="height:300px">
  <img src="rec.png" alt="" >

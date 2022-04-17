@@ -28,14 +28,14 @@
      
   }
 </style>
-    <title>Hello, world!</title>
+    <title>HRMS.com</title>
   </head>
   <body>
     <div class="container2" style="width: 600px">
        <label for="staticEmail" class=" col-form-label"><b>Your company's name*</b></label>
-       <input class="form-control" type="text"    aria-label="default input example">
+       <input class="form-control" type="text"    aria-label="default input example" required>
        <label for="staticEmail" class=" col-form-label" ><b>Your company's number of employees</b></label>
-<select class="form-control" aria-label=".form-select-sm example">
+<select class="form-control" aria-label=".form-select-sm example" required>
   <option selected>Select an option</option>
   <option value="1">1 to 49</option>
   <option value="2">50 to 149</option>
@@ -46,9 +46,9 @@
   <option value="7">1000+</option>
 </select>
   <label for="staticEmail" class="  col-form-label"><b>Your first and last name*</b></label>
-    <input class="form-control" type="text"    aria-label="default input example">
+    <input class="form-control" type="text"    aria-label="default input example" required>
     <label for="staticEmail" class="  col-form-label"><b>Your role in the hiring process</b></label>
-    <select class="form-control" aria-label=".form-select-sm example">
+    <select class="form-control" aria-label=".form-select-sm example" required>
   <option selected>Select an option</option>
   <option value="1">Hirirng Manager </option>
   <option value="2">Recuriter or Talent Acquisition</option>
@@ -59,7 +59,7 @@
   
 </select>
 <label for="staticEmail" class="  col-form-label"><b>Your typical hiring budget</b></label>
- <select class="form-control" aria-label=".form-select-sm example">
+ <select class="form-control" aria-label=".form-select-sm example" required>
   <option selected>Select an option</option>
   <option value="1">I have a budget for my role(s) </option>
   <option value="2">No planned budget but I can Spend if needed </option>
@@ -67,7 +67,7 @@
   
 </select>
    <label for="staticEmail" class="  col-form-label"><b>Primary Reason</b></label>
-    <select class="form-control" aria-label=".form-select-sm example">
+    <select class="form-control" aria-label=".form-select-sm example" required>
   <option selected>Select an option</option>
   <option value="1">No budget available for hiring </option>
   <option value="2">Need spend approval</option>
@@ -76,9 +76,9 @@
   <option value="3">Other</option>
 </select>
   <label for="staticEmail" class="  col-form-label"><b>Your phone number </b></label>
-       <input class="form-control" type="text"    aria-label="default input example">
+       <input class="form-control" type="text"    aria-label="default input example" required>
 <label for="staticEmail" class="  col-form-label"><b>How you heard about us</b></label>
-    <select class="form-control" aria-label=".form-select-sm example">
+    <select class="form-control" aria-label=".form-select-sm example" required>
   <option selected>Select an option</option>
   <option value="1">Radio (FM/XM/AM) </option>
 <option value="2">Social Media</option>
@@ -95,7 +95,9 @@
   
 </select>
 <button type="button" class="btn btn-dark ">Back</button>
+<a href="requirement_2.php">
 <button type="button" class="btn  btn-primary my-3 mx-5">Save and continue</button>
+</a>
 </div>
 <div class= "img" style="height:300px">
  <img src="rec.png" alt="" >
